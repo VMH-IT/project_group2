@@ -143,7 +143,7 @@ $uList = executeResult($sql);
 </body>
 <script>
       function come_back(){
-          history.back();
+        //   history.back();
       }
   </script>
 </html>
