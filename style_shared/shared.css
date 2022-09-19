@@ -6,7 +6,7 @@
 }
 .tyle{
   height: 35px;
-  background: #63B8FF;
+  background: #FD841F;
 }
   
 .texts{
@@ -17,13 +17,13 @@
 .hinh_binh_hanh{
   width: 0;
   height: 0;
-  border-bottom: 35px solid #63B8FF;
+  border-bottom: 35px solid #FD841F;
   border-right: 44px solid transparent;
  }
 
 .head1{
   height: 1px;
-  background: #63B8FF;
+  background: #FD841F;
   width: 100%;
 }
 
@@ -68,7 +68,7 @@
   background-color: white;
   transition: 0.5s;
   margin-bottom: 20px;
-  border: solid #63B8FF 0.1px;
+  border: solid #FD841F 0.1px;
 }
 .d05{
   margin-top: 20px;
@@ -92,6 +92,7 @@
 
 .img-01{
   width: 1000px;
+  /* height: 800px; */
   margin: 0px auto;
   margin-bottom: 20px;
 }
@@ -118,15 +119,15 @@
 .img-sp-2{
   width: 100%;
   height: 95%;
-  background-color: #63B8FF;
+  background-color: #FD841F;
 }
 
 .d05 h4{
   height: 44px;
-  color:#63B8FF ;
+  color:#FD841F ;
 }
 .d05 h3{
-    color:#63B8FF ;
+    color:#FD841F ;
 
 }
 p{

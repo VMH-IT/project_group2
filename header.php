@@ -39,9 +39,28 @@ if(isset($_GET['s'])) {
 </head>
 <body>
 	<header class="header" id="myHeader">
-		<div class="logo">
-			<img src="style_head_vs_last/background/logo_cosi.png" style="width: 233px; height: 60px;">
+        <div class="header-above-1" >
+			<p> Welcome to our online strore</p>
 		</div>
+		<div class="header-above">
+			<div>
+				
+			</div>
+			<div class="logo">
+				<img src="style_head_vs_last/background/logo/logo.png" style="width: 100px; height: 100px;">
+				<h3>CHICLIGHING<p>GROUP-TWO</p></h3>
+			</div>
+
+			<div class="any">	    
+					<form action="all_product.php" class="search-box" method="get">
+					<input type="text" placeholder="search" name="s">
+					<button class="search-button" type="submit">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					</form>        
+			</div>
+		</div>
+
 		<div class="menu">
 			<li><a class="" href="index.php"><i class="fa fa-home" style="color: black; font-size: 20px"></i>Home</a></li>
 			<li></li>
@@ -52,7 +71,7 @@ if(isset($_GET['s'])) {
         		$sql= "select * from brand;";
         		$result = mysqli_query($conn,$sql);
         		while ($row = mysqli_fetch_assoc($result)){
-					echo '<a href="brand.php?id_brand='.$row['id_brand'].'"><li><span>'.(++$index).'</span>'.$row['brand'].'</li></a>';
+					echo '<a href="brand.php?id_brand='.$row['id_brand'].'"><li>'.$row['brand'].'</li></a>';
         		}               
         	?>
 					
@@ -66,7 +85,7 @@ if(isset($_GET['s'])) {
         		$sql= "select * from type;";
         		$result = mysqli_query($conn,$sql);
         		while ($row = mysqli_fetch_assoc($result)){
-					echo '<a href="all_product.php?id_type='.$row['id_type'].'"><li><span>'.(++$index).'</span>'.$row['type'].'</a></li>';
+					echo '<a href="all_product.php?id_type='.$row['id_type'].'"><li>'.$row['type'].'</a></li>';
         		}               
         	?>
 					
@@ -79,18 +98,11 @@ if(isset($_GET['s'])) {
 			<li><a href="compare.php?id_1=1&id_2=2&submit=compare">Compare</a></li>
 			<li></li>
 			<li><a href="contact.php">Contact</a></li>
-			<li>
+			<!-- <li>
               <a href="login.php" style="width: 10px; color: black; float: right;">Login</a>
-            </li>
+            </li> -->
 		</div>
-		<div class="any">	    
-				<form action="all_product.php" class="search-box" method="get">
-         		  <input type="text" placeholder="search" name="s">
-				  <button class="search-button" type="submit">
-          	      <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>        
-		</div>
+	
 	</header>
 	
 

@@ -26,7 +26,7 @@ $std = executeResult($sql, true);
 </head>
 <body style="font-family: 'Hind', sans-serif;">
 	 <div class="img-01">
-            <div class=" img-11"><img src="style_sp/img-all/img-001.jpg"></div>
+            <div class=" img-11"><img src="style_sp/img-all/living-room-ceiling-lights-for-your-home.jpg"></div>
 
     </div> 
   

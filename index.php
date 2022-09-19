@@ -37,22 +37,22 @@ $uList = executeResult($sql);
         <div class="mySlides fade">
           <a href="">
             <img
-              src="style_sp/img-all/img-009.jpg"
-              height="500px" width="100%">
+              src="style_sp/img-all/banner-1.jpg"
+              height="700px" width="100%">
           </a>
         </div>
         <div class="mySlides fade">
           <a href="">
             <img
-              src="style_sp/img-all/slide_img_2.png"
-              height="500px" width="100%">
+              src="style_sp/img-all/banner-2.jpg"
+              height="700px" width="100%">
           </a>
         </div>
         <div class="mySlides fade">
           <a href="">
             <img
-              src="style_sp/img-all/slide_img_3.png"
-              height="500px" width="100%">
+              src="style_sp/img-all/banner-3.jpg"
+              height="700px" width="100%">
           </a>
         </div>
         <br>
@@ -67,11 +67,12 @@ $uList = executeResult($sql);
         <div class="WELCOME">
           <div class="WELCOME-1">
             <h2 class="e05">HELLO THERE!</h2>
-            <h2 class="e04">WELCOME TO COSY</h2><br>
-            <h4 class="e05">COOL YOUR SPACE WITH INNOVATIVE AIR CONDITIONERS</h4>
-            <p>Here you can purchase different kinds of brands of air conditioners with suitable prices. We provide you large variety of air conditioners.Cosy employ our own installation teams who only work for Cosy. We buy direct from the manufacturer. We quote, We install, We guarantee it!
+            <h2 class="e04">WELCOME TO CHICLIGHTING</h2><br>
+            <h4 class="e05">AT CHICLIGHTING & DESIGN, WE ARE DEDICATED TO SUSTOMER SERVICE </h4>
+            <p>Chic Lighting & Design is an online retailer that specializes in LED Lights, Lamps, Chandeliers and Pendant lighting. 
             </p>
-            <p>This guarantees you a quality assured job installed to the standards and guaranteed by Cosy. At Cosy, we go well beyond just quoting a shelf product or merely quoting from a plan. Cosy holds Standards Licence and is passionate about quality. As such, we are wholly committed to providing our customers with what they want… the best energy solutions available for their home environment!
+            <p>We have a range of collections that include; crystal chandeliers, traditional chandeliers, modern chandeliers, glass pendant lights, industrial and retro pendant lights, metal pendant lights and many more.
+
             </p>
           </div>
           <div class="WELCOME-2" >
@@ -81,10 +82,10 @@ $uList = executeResult($sql);
             <h2 class="e04"><center>100% SATISFACTION GUARANTEE</center></h2>
           </div>  
         </div>
-
+  
 
       <div class="s01">
-       <div class="left">
+       <div class="left"> 
           <div class="tyles">
             <div class="tyle"   ><h5 class="texts">most popular products</h5></div>
             <div class="hinh_binh_hanh"></div>
