@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 require_once('utyls/utility.php');   
 require_once('db/dbhelper.php');
@@ -7,20 +8,29 @@ require_once('db/dbhelper.php');
 
 $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capacity = $cooling_capacity = $Power_Input = "";
 	if(!empty($_POST)) {
-	$name_products = getPost('name_products');   
-	$price = getPost('price');
-	$id_type = getPost('id_type');
-	$id_brand = getPost('id_brand');
-	$made_in = getPost('made_in');
-	$heating_capacity = getPost('heating_capacity');
-	$cooling_capacity = getPost('cooling_capacity');
-	$Power_Input = getPost('Power_Input');
-	$intro = getPost('intro');
-
-	$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,heating_capacity,cooling_capacity,Power_Input,intro) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$heating_capacity','$cooling_capacity','$Power_Input','$intro')";  
-	execute($sql);                    
-	header('Location: admin_list.php');     
-	die();
+		$img1 = getPost('img_1');
+		$img2 = getPost('img_2');
+		$img3 = getPost('img_3');
+		$img4 = getPost('img_4');
+	
+		// save img 
+		$sqlImg = "insert into img(img_1, img_2, img_3, img_4) values ('$img1', '$img2', '$img3', '$img4')";	
+		$image = insert($sqlImg, true);
+		
+		$name_products = getPost('name_products');   
+		$price = getPost('price');
+		$id_type = getPost('id_type');
+		$id_brand = getPost('id_brand');
+		$made_in = getPost('made_in');
+		$heating_capacity = getPost('heating_capacity');
+		$cooling_capacity = getPost('cooling_capacity');
+		$Power_Input = getPost('Power_Input');
+		$intro = getPost('intro');
+		$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,heating_capacity,cooling_capacity,Power_Input,intro,id_img) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$heating_capacity','$cooling_capacity','$Power_Input','$intro','$image')";  
+		// var_dump($sql);
+		execute($sql);                    
+		header('Location: admin_list.php');     
+		die();
 
 }
 ?>     
@@ -74,17 +84,28 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
 		     	    	    		<label>price</label><br>
-			     	    	        <input type="text" name="price">
+			     	    	        <input type="number" name="price">
 			     	    	   </div>
 		     	    	    </div>
 		     	    	    <div class="input-a4">
 		     	    	    	<div class="input-b1">
-		     	    	    		<label>brand</label><br>
-			     	    	        <input type="text" name="id_brand">
+			     	    	        <select class="form-select" aria-label="Default select example" name="id_brand">
+										<option selected>Brand</option>
+										<option value="1">Panasonic</option>
+										<option value="2">fu</option>
+										<option value="3">Daikin</option>
+										<option value="3">LG</option>
+										<option value="3">SamSung</option>
+
+									</select>
 			     	    	    </div>
 		     	    	    	<div class="input-b1">
-		     	    	    		<label>type</label><br>
-			     	    	        <input type="text" name="id_type">
+									 <select class="form-select" aria-label="Default select example"name="id_type">
+										<option selected>Type</option>
+										<option value="1">ceiling sound</option>
+										<option value="2">cabinet</option>
+										<option value="3">wall hanging</option>
+									</select>
 			     	    	    </div>		     	    	    
 							</div>
 		     	    	</div>
@@ -140,6 +161,10 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 	     	    	    </div>
 	     	    	</div>   
 	            </div>
+				<div class="inputBox w100">
+                   <input type="submit" value="To send">                
+                   <a href="index.php" style="margin-left: 100px;">home</a>
+               </div>
 		    </div>
 	 	</div>
  	</form>

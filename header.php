@@ -18,7 +18,7 @@ $index = ($page - 1) * $limit;
 
 if(isset($_GET['s'])) {
 	$s = $_GET['s'];
-	$sql = "select * from products where id_sp like '%$s%' limit $index, $limit";
+	$sql = "select * from products where id_products like '%$s%' limit $index, $limit";
 } else {
 	$sql = "select * from products limit $index, $limit";     
 }

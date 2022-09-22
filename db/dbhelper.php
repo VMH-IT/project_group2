@@ -32,3 +32,11 @@ function executeResult($sql, $isSingle = false) {
 	mysqli_close($conn);
 	return $data;
 }
+
+function insert ($sql){
+	$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
+	mysqli_set_charset($conn, 'utf8');
+	mysqli_query($conn, $sql);
+
+	return mysqli_insert_id($conn);
+}

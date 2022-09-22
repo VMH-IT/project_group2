@@ -4,19 +4,6 @@
 require_once('utyls/utility.php');   
 require_once('db/dbhelper.php');
 
-$ten_sach = $tac_gia = $gia_ban =$nxs =$id= "";     
-if(!empty($_POST)) {
-	$ten_sach = getPost('ten_sach');   
-	$tac_gia = getPost('tac_gia');
-	$gia_ban = getPost('gia_ban');
-	$nxs = getPost('nxs');
-
-	$sql = "insert into book(ten_sach, tac_gia,gia_ban,nxs ) values ('$ten_sach', '$tac_gia', '$gia_ban','$nxs')";  
-	execute($sql);                    
-	header('Location: books.php');     
-	die();
-}
-$id = getGet('id');
 
 ?>     
 
