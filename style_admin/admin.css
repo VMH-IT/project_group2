@@ -13,7 +13,7 @@
     background-color: #f6f7bb;
     border-right:solid black 1px ;
 	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    color: #FFFAE7;
+    color: black;
     
    /* #dfe1e5*/
 }
@@ -28,7 +28,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background-color: #FFFAE7;
     display: flex;
-    color: white;
+    color: black;
 }
 .a-2{
 	height: 50px;
@@ -36,7 +36,7 @@
     background-color: #FFFAE7;
 	margin-top: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-	color:white ;
+	color:black ;
 
 
 
@@ -46,7 +46,7 @@
 	padding-top: 12px;
 }
 .admin-1{
-	color:#dfe1e5 ;
+	color:black ;
 	height: 60px;
 	display: block;
 	width: 80%;
@@ -82,10 +82,10 @@ a .admin{
 	width: 200px;
 }
 .admin:hover{
-	color: white;
+	color: black;
 }
 .colum{
-	color: #eaedf2 ;
+	color: black ;
 }
 
 .pont-ad{
@@ -101,14 +101,14 @@ a .admin{
    text-decoration: none;
    list-style-type: none;
    background-color:#f6f7bb ;
-   color: #FFFAE7;
+   color: black;
    width: 180px;
    height: 40px;
    padding-left: 20px;
    border-bottom: solid black 1px;
 }
 .brand-1 a li:hover{
-	color: white;
+	color: black;
 }
 .brand-1{
 	   display: none;

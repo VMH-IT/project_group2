@@ -38,7 +38,7 @@ require_once('db/dbhelper.php');
                     </svg></a>
      	     	</div>
             </div>
-     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3><h3>(This function is currently not available!!)</h3></div>
+     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3></div>
 	     	<div class="input-ss">
 	     	    <div class="input-s1">
 	     	    	<div class="input-a1 pont-ad"><h5>information form</h5></div>
