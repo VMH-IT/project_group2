@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 require_once('utyls/utility.php');   
 require_once('db/dbhelper.php');
@@ -7,20 +8,29 @@ require_once('db/dbhelper.php');
 
 $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capacity = $cooling_capacity = $Power_Input = "";
 	if(!empty($_POST)) {
-	$name_products = getPost('name_products');   
-	$price = getPost('price');
-	$id_type = getPost('id_type');
-	$id_brand = getPost('id_brand');
-	$made_in = getPost('made_in');
-	$heating_capacity = getPost('heating_capacity');
-	$cooling_capacity = getPost('cooling_capacity');
-	$Power_Input = getPost('Power_Input');
-	$intro = getPost('intro');
-
-	$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,heating_capacity,cooling_capacity,Power_Input,intro) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$heating_capacity','$cooling_capacity','$Power_Input','$intro')";  
-	execute($sql);                    
-	header('Location: admin_list.php');     
-	die();
+		$img1 = getPost('img_1');
+		$img2 = getPost('img_2');
+		$img3 = getPost('img_3');
+		$img4 = getPost('img_4');
+	
+		// save img 
+		$sqlImg = "insert into img(img_1, img_2, img_3, img_4) values ('$img1', '$img2', '$img3', '$img4')";	
+		$image = insert($sqlImg, true);
+		
+		$name_products = getPost('name_products');   
+		$price = getPost('price');
+		$id_type = getPost('id_type');
+		$id_brand = getPost('id_brand');
+		$made_in = getPost('made_in');
+		$heating_capacity = getPost('heating_capacity');
+		$cooling_capacity = getPost('cooling_capacity');
+		$Power_Input = getPost('Power_Input');
+		$intro = getPost('intro');
+		$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,heating_capacity,cooling_capacity,Power_Input,intro,id_img) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$heating_capacity','$cooling_capacity','$Power_Input','$intro','$image')";  
+		// var_dump($sql);
+		execute($sql);                    
+		header('Location: admin_list.php');     
+		die();
 
 }
 ?>     
@@ -57,89 +67,106 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
                     </svg></a>
      	     	</div>
 	            </div>
-	     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3><h3>(This function is currently not available!!)</h3></div>
+	     	    <div class="a-2 pont-ad">	
+					<center>
+			     	    <h2>Base Information</h2>
+			    		<h5>Id Product:<?=$std['max']+1?></h5>
+		 	    		<div class="hr-2"></div>
+		     	    </center></div>
 		     	<div class="input-ss">
 		     	    <div class="input-s1">
-		     	    	<div class="input-a1 pont-ad"><h5>information form</h5></div>
+		     	    	<div class="input-a1 pont-ad"><h5>Information Form</h5></div>
 		     	    	<div class="input-a2 pont-ad">
-		     	    		<center>
-			     	    		<h2>base information</h2>
-			     	    		<h5>Id product:<?=$std['max']+1?></h5>
-			     	    		<div class="hr-2"></div>
-		     	    	    </center>
+		     	    	
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>name product</label><br>
+		     	    	    		<label>Name product</label><br>
 			     	    	        <input type="text" name="name_products">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>price</label><br>
-			     	    	        <input type="text" name="price">
+		     	    	    		<label>Price</label><br>
+			     	    	        <input type="number" name="price">
 			     	    	   </div>
 		     	    	    </div>
 		     	    	    <div class="input-a4">
 		     	    	    	<div class="input-b1">
-		     	    	    		<label>brand</label><br>
-			     	    	        <input type="text" name="id_brand">
+			     	    	        <select class="form-select" aria-label="Default select example" name="id_brand">
+										<option selected>Brand</option>
+										<option value="1">Panasonic</option>
+										<option value="2">fu</option>
+										<option value="3">Daikin</option>
+										<option value="3">LG</option>
+										<option value="3">SamSung</option>
+
+									</select>
 			     	    	    </div>
 		     	    	    	<div class="input-b1">
-		     	    	    		<label>type</label><br>
-			     	    	        <input type="text" name="id_type">
+									 <select class="form-select" aria-label="Default select example"name="id_type">
+										<option selected>Type</option>
+										<option value="1">ceiling sound</option>
+										<option value="2">cabinet</option>
+										<option value="3">wall hanging</option>
+									</select>
 			     	    	    </div>		     	    	    
 							</div>
 		     	    	</div>
 		     	    </div>
 		     	    <div class="input-s2">
-		     	    	<div class="input-a1 pont-ad"><h5>data form</h5></div>
+		     	    	<div class="input-a1 pont-ad"><h5>Data Form</h5></div>
 		     	    	<div class=" pont-ad">
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>cooling capacity</label><br>
+		     	    	    		<label>Cooling Capacity</label><br>
 			     	    	    	<input type="text" name="cooling_capacity">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>heating capacity</label><br>
+		     	    	    		<label>Heating Capacity</label><br>
 			     	    	    	<input type="text" name="heating_capacity">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>power input</label><br>
+		     	    	    		<label>Power Input</label><br>
 			     	    	    	<input type="text" name="Power_Input">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>intro</label><br>
+		     	    	    		<label>Intro</label><br>
 			     	    	        <input type="text" name="intro">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>made in</label><br>
+		     	    	    		<label>Made In</label><br>
 			     	    	        <input type="text" name="made_in">
 			     	    	   </div>
 		     	    	    </div>
 		     	    	</div>    
 		     	    </div>
-	            </div>
-	            <div class="input-s3">
-	            	<div class="input-a1 pont-ad"><h5>data form</h5></div>
+					 <div class="input-s3">
+	            	<div class="input-a1 pont-ad"><h5>Data Form</h5></div>
 	     	    	<div class=" pont-ad">
 	     	    	    <div class="input-a3">
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>img 1</label><br>
+	     	    	    		<label>Image 1</label><br>
 		     	    	    <input type="text" name="img_1">
 		     	    	    </div>
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>img 2</label><br>
+	     	    	    		<label>Image 2</label><br>
 		     	    	    <input type="text" name="img_2">
 		     	    	   </div>
 		     	    	   <div class="input-b2">
-	     	    	    		<label>img 3</label><br>
+	     	    	    		<label>Image 3</label><br>
 		     	    	    <input type="text" name="img_3">
 		     	    	   </div>
 		     	    	   <div class="input-b2">
-	     	    	    		<label>img 4</label><br>
+	     	    	    		<label>Image 4</label><br>
 		     	    	    <input type="text" name="img_4">
 		     	    	   </div>
 	     	    	    </div>
 	     	    	</div>   
 	            </div>
+	            </div>
+	           
+				<div class="inputBox w100">
+                   <input class = "input-add" type="submit" value="To send">                
+                  
+               </div>
 		    </div>
 	 	</div>
  	</form>

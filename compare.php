@@ -11,9 +11,9 @@ if(isset($_GET['submit'])){
       $id_1 = $_GET['id_1'];
       $id_2 = $_GET['id_2'];
       
-      $sql1= "select * from vw_show_product where id_sp = '$id_1'";
+      $sql1= "select * from vw_show_product where id_products = '$id_1'";
 
-      $sql2= "select * from vw_show_product where id_sp = '$id_2'";
+      $sql2= "select * from vw_show_product where id_products = '$id_2'";
 
       $List = executeResult($sql1, true);
       
@@ -55,7 +55,7 @@ if(isset($_GET['submit'])){
                     <option value="">---------------Select Product---------------</option>
                 <?php
                     while ($row = mysqli_fetch_assoc($result)){
-                        echo '<option value="'.$row['id_sp'].'"><span>'.(++$index).'</span>'.$row['name_products'].'</option>';
+                        echo '<option value="'.$row['id_products'].'"><span>'.(++$index).'</span>'.$row['name_products'].'</option>';
                     } 
                 ?>
                 </select>
@@ -68,7 +68,7 @@ if(isset($_GET['submit'])){
                     <option value="">---------------Select Product---------------</option>
                     <?php
                     while ($row = mysqli_fetch_assoc($result1)){
-                        echo '<option value="'.$row['id_sp'].'"><span>'.(++$num).'</span>'.$row['name_products'].'</option>';
+                        echo '<option value="'.$row['id_products'].'"><span>'.(++$num).'</span>'.$row['name_products'].'</option>';
                     } 
                 ?>
                 </select>
