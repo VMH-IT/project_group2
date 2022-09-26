@@ -349,7 +349,7 @@ $uList = executeResult($sql);
                 <?php
             $index = 0;
             foreach($uList as $item) {    
-            echo '<a href="product.php?id='.$item['id_sp'].'"class="d04" >
+            echo '<a href="product.php?id='.$item['id_products'].'"class="d04" >
             <div >
                 <div class="img_product-1" >
                     <img src="'.$item['img_1'].'"style="width: 100% ; height: auto;">

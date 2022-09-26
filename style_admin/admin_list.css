@@ -1,5 +1,6 @@
 body{
 	background-color: #FFFAE7;
+	color: black;
 }
 .list{
 	display: flex;
@@ -21,15 +22,15 @@ width: 90%;
 	margin-top: 50px;
 }
 .table table, tr {
-	border:5px solid #63B8FF;
+	border:5px solid #f6f7bb;
     text-align:center;
-    color:white ;
+    color:black ;
 
 }
 .table table{
     border-collapse:collapse;
     width: 100%;
-    background-color: #28589c;
+    background-color: #FD841F;
 
 }
 .img-sp-1{

@@ -67,23 +67,24 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
                     </svg></a>
      	     	</div>
 	            </div>
-	     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3></div>
+	     	    <div class="a-2 pont-ad">	
+					<center>
+			     	    <h2>Base Information</h2>
+			    		<h5>Id Product:<?=$std['max']+1?></h5>
+		 	    		<div class="hr-2"></div>
+		     	    </center></div>
 		     	<div class="input-ss">
 		     	    <div class="input-s1">
-		     	    	<div class="input-a1 pont-ad"><h5>information form</h5></div>
+		     	    	<div class="input-a1 pont-ad"><h5>Information Form</h5></div>
 		     	    	<div class="input-a2 pont-ad">
-		     	    		<center>
-			     	    		<h2>base information</h2>
-			     	    		<h5>Id product:<?=$std['max']+1?></h5>
-			     	    		<div class="hr-2"></div>
-		     	    	    </center>
+		     	    	
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>name product</label><br>
+		     	    	    		<label>Name product</label><br>
 			     	    	        <input type="text" name="name_products">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>price</label><br>
+		     	    	    		<label>Price</label><br>
 			     	    	        <input type="number" name="price">
 			     	    	   </div>
 		     	    	    </div>
@@ -111,59 +112,60 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 		     	    	</div>
 		     	    </div>
 		     	    <div class="input-s2">
-		     	    	<div class="input-a1 pont-ad"><h5>data form</h5></div>
+		     	    	<div class="input-a1 pont-ad"><h5>Data Form</h5></div>
 		     	    	<div class=" pont-ad">
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>cooling capacity</label><br>
+		     	    	    		<label>Cooling Capacity</label><br>
 			     	    	    	<input type="text" name="cooling_capacity">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>heating capacity</label><br>
+		     	    	    		<label>Heating Capacity</label><br>
 			     	    	    	<input type="text" name="heating_capacity">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>power input</label><br>
+		     	    	    		<label>Power Input</label><br>
 			     	    	    	<input type="text" name="Power_Input">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>intro</label><br>
+		     	    	    		<label>Intro</label><br>
 			     	    	        <input type="text" name="intro">
 			     	    	   </div>
 			     	    	   <div class="input-b2">
-		     	    	    		<label>made in</label><br>
+		     	    	    		<label>Made In</label><br>
 			     	    	        <input type="text" name="made_in">
 			     	    	   </div>
 		     	    	    </div>
 		     	    	</div>    
 		     	    </div>
-	            </div>
-	            <div class="input-s3">
-	            	<div class="input-a1 pont-ad"><h5>data form</h5></div>
+					 <div class="input-s3">
+	            	<div class="input-a1 pont-ad"><h5>Data Form</h5></div>
 	     	    	<div class=" pont-ad">
 	     	    	    <div class="input-a3">
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>img 1</label><br>
+	     	    	    		<label>Image 1</label><br>
 		     	    	    <input type="text" name="img_1">
 		     	    	    </div>
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>img 2</label><br>
+	     	    	    		<label>Image 2</label><br>
 		     	    	    <input type="text" name="img_2">
 		     	    	   </div>
 		     	    	   <div class="input-b2">
-	     	    	    		<label>img 3</label><br>
+	     	    	    		<label>Image 3</label><br>
 		     	    	    <input type="text" name="img_3">
 		     	    	   </div>
 		     	    	   <div class="input-b2">
-	     	    	    		<label>img 4</label><br>
+	     	    	    		<label>Image 4</label><br>
 		     	    	    <input type="text" name="img_4">
 		     	    	   </div>
 	     	    	    </div>
 	     	    	</div>   
 	            </div>
+	            </div>
+	           
 				<div class="inputBox w100">
-                   <input type="submit" value="To send">                
-                   <a href="index.php" style="margin-left: 100px;">home</a>
+                   <input class = "input-add" type="submit" value="To send">                
+                  
                </div>
 		    </div>
 	 	</div>

@@ -21,9 +21,9 @@
             <p>
                 <a href="#">Home</a>
                 
-                <a href="#">Blog</a>
+                <a href="map.html">Address</a>
             
-                <a href="#">About</a>
+                <a href="#">About Us</a>
                 
                 <a href="#">Faq</a>
                 

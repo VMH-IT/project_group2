@@ -4,7 +4,7 @@ require "header.php";
 require_once('utyls/utility.php');   
 require_once('db/dbhelper.php');
 
-$sql = "select * from vw_show_product where id_sp < 5";      
+$sql = "select * from vw_show_product where id_products < 5";      
 $uList = executeResult($sql);      
 ?>
 
@@ -92,7 +92,7 @@ $uList = executeResult($sql);
           </div>
           <div class="head1"></div>
           <?php
-                $sql = "select  * from vw_show_product where id_sp =29  ;";
+                $sql = "select  * from vw_show_product where id_products =29  ;";
                 $std = executeResult($sql, true);
                 echo '
          <div class="b01">
@@ -102,7 +102,7 @@ $uList = executeResult($sql);
            
              <div class="c02">
             <div class ="d05">
-               <a href="product.php?id='.$std['id_sp'].'" class="d02">
+               <a href="product.php?id='.$std['id_products'].'" class="d02">
                 <div >
                 <h3>'.$std['name_products'].'</h3>
                 <div class="capacity ">
@@ -154,7 +154,7 @@ $uList = executeResult($sql);
             <?php
         $index = 0;
         foreach($uList as $item) {    
-        echo '<a href="product.php?id='.$item['id_sp'].'" class="d02">
+        echo '<a href="product.php?id='.$item['id_products'].'" class="d02">
             <div class="img_product-1" ><img src="'.$item['img_1'].'"class="img-sp-1"></div>
             <div class ="d05">
             <h4>'.$item['name_products'].'</h4></br>

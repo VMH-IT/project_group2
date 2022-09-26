@@ -46,14 +46,14 @@
 	height: 150px;
 }
 .table-1{
-	border-right: solid #63B8FF 1px ;
+	border-right: solid #FFFAE7 1px ;
 	padding-left: 50pxs;
 	margin-left: 40px;
 
 	width: 400px;
 }
 .table-1 tr{
-	border-bottom: solid blue 1px;
+	border-bottom: solid #FD841F 1px;
 	padding-top: 10px;
 }
 .c23{
@@ -74,3 +74,4 @@
 }
 .d23  a > button {
    width: 300px;
+}
