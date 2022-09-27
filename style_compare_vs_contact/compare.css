@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8";
 
 * {
     margin: 0;
@@ -97,11 +97,44 @@ label:after {
     vertical-align: middle;
     margin-left: -2.5px
 }
+*/
+
+.compare_image_bar {
+    max-width: 1030px;
+    /* margin: auto; */
+    margin-left: 615px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Helvetica, arial, sans-serif
+}
+
+.compare-dropmenu_bar form{
+    display: flex;
+    padding-top: 20px ;
+    justify-content: center;
+}
+ .input_compare{
+  
+    display: flex;
+    align-items: center;
+ }
+ .input_compare input{
+    padding:  20px 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+ }
+
+
+
 
 .compare_detail_box {
     width: 1130px;
     height: 480px;
-    background: 0 0
+    margin: auto;
+    padding-left: 90px;
 }
 
 .Detail_C1 {
@@ -129,6 +162,7 @@ label:after {
     margin-left: 30px
 }
 
+
 table {
     border-collapse: separate
 }
@@ -141,13 +175,13 @@ tr {
 td div {
     height: 29px;
     border-radius: 4px;
-    border: 1px solid #004067;
+    border: 1px solid #FD841F;
     padding-top: 6px
 }
 
 #table01 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     width: 190px
 }
 
@@ -164,23 +198,23 @@ td div {
 }
 
 #table01 tr div {
-    background-color: #63b8ff;
-    color: #fff;
+    background-color: #FFFAE7;
+    color: black;
 }
 
 .BGstyle01 {
-    background-color: #63b8ff;
+    background-color: #FFFAE7;
     color: #fff
 }
 .BGstyle01> p {
-    color: white;
+    color: black;
 }
 .BGstyle02> p {
     color:black ;
 }
 .BGstyle02 {
-    background-color:#63b8ff;
-    color: rgba(0, 62, 100, 1)
+    background-color:#FFFAE7;
+    color: black
 }
 
 
@@ -227,30 +261,36 @@ td div {
 .sth li:hover{
     transform: scale(1.1);
     z-index: 10;
-    background: #25bcff;
+    background: #FFFAE7;
     box-shadow: 0 5px 25px rgba(0,0,0,.2);
     color: #fff;
     opacity: 1;
 }
 .sth li:hover span {
     background: #fff;
-    color: #25bcff;
+    color: #FFFAE7;
 }
 
 
 .image1 img{
     width: 80%;
-    height: auto;
+    margin-right: 30px;
+  
 }
 .image1{
-    width: 50%;
-    padding-left: 5%;
-    padding-right: 5%;
-
+    width: 350px;
+ 
 }
 .style-s1{
     height: 100px;
 }
 .ero{
     margin-top: 500px;
+} 
+label{
+    font-weight: 600;
+}
+#image2{
+    padding-left: 20px;
+
 }

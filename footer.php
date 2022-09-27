@@ -23,7 +23,7 @@
                 
                 <a href="map.html">Address</a>
             
-                <a href="about_us.html">About Us</a>
+                <a href="about_us.php">About Us</a>
                 
                 <a href="#">Faq</a>
                 
