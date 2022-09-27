@@ -1,11 +1,11 @@
 <?php
 require_once('config.php');
-function init() {
-	$conn = mysqli_connect(HOST, USERNAME, PASSWORD);
-	mysqli_set_charset($conn, 'utf8');
-	mysqli_query($conn, SQL_CREATE_DATABASE);
-	mysqli_close($conn);
-}
+// function init() {
+// 	$conn = mysqli_connect(HOST, USERNAME, PASSWORD);
+// 	mysqli_set_charset($conn, 'utf8');
+// 	mysqli_query($conn, SQL_CREATE_DATABASE);
+// 	mysqli_close($conn);
+// }
 
 function execute($sql) {
 
