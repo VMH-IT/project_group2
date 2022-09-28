@@ -5,7 +5,7 @@ require_once('db/dbhelper.php');
 if(!empty($_POST)) {
 	$id = getPost('id');
 
-	$sql = "delete from products where id_sp = '$id'";
+	$sql = "delete from products where id_products = '$id'";
 	execute($sql);
 
 	$sql2 = "delete from img where id_img = '$id'";
@@ -16,7 +16,7 @@ if(!empty($_POST)) {
 }
 
 $id = getGet('id');
-$sql1 = "select * from vw_show_product where id_sp = '$id'";
+$sql1 = "select * from vw_show_product where id_products = '$id'";
 $std = executeResult($sql1, true);
 if($std == null) {
 	header('Location: admin_list.php');
@@ -51,7 +51,7 @@ if($std == null) {
 			<label>Name:<?=$std['name_products']?></label>
 			<br>
 			<img src="<?=$std['img_1']?>" style="width: 400px; height: 200px;">
-			<input required type="text" name="id" class="form-control" value="<?=$std['id_sp']?>" style="display: none;">
+			<input required type="text" name="id" class="form-control" value="<?=$std['id_products']?>" style="display: none;">
 		</div>
 		<div class="form-group">
 			<button class="btn btn-danger">Confirm Delete</button>

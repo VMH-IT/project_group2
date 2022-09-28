@@ -1,39 +1,49 @@
 .input-ss{
 	display: flex;
-	width: 95%;
-	margin: 2.5%;
+	height: 520px;
+	justify-content: space-between;
+	margin: 20px;
+	border-radius: 15px;
+	
+
 }
 .input-s1{
-	width: 48.75%;
-	margin-right: 1.25%;
+	width: 32%;
 	border: solid #e6e6e6 1px;
 	background-color: white;
-	height: 520px;
+	border-radius: 15px;
 }
 .input-s2{
-	width: 48.75%;
+	width: 32%;
 	border: solid #e6e6e6 1px;
-	margin-left: 1.25%;
-	height: 520px;
 	background-color: white;
+	border-radius: 15px;
 
+}
+.input-s3{
+	width: 32%;
+	background-color: white;
+	border: solid #e6e6e6 1px;
+	border-radius: 15px;
 }
 .input-a1{
 	width: 100%;
 	height: 40px;
 	background-color: #f2f2f2;
 	display: flex;
+	border-radius: 15px 15px 0px 0px;
 }
 .input-a1 h5 {
 	padding: 10px;
 	margin-right: 200px;
+
 }
-.input-a2{
-	padding-top: 30px;
-}
+
+
 .hr-2{
+	margin: 10px 0px;
 	height: 0.5px;
-	width: 90%;
+	width: 50%;
 	background-color:#ccc9c9 ;
 }
 .input-a3{
@@ -58,7 +68,7 @@
 
 }
 .input-b1 input{
-   width: 100%;
+   width: 90%;
    height: 40px;
    border-radius: 5px;
 	border: solid #ccc9c9 1px;
@@ -69,16 +79,21 @@
 	width: 90%;
 	display: flex;
 }
+.form-select {
+	height: 40px;
+	width: 120px;
+	border-radius: 5px;
+
+}
 .submit{
 	margin-top:5px;
 	margin-left: 130px;
 	width: 50px;
 	height: 30px;
 }
-.input-s3{
-	width: 55%;
-	height: 450px;
-	margin-left: 2.5%;
-	background-color: white;
-	border: solid #e6e6e6 1px;
+.input-add{
+	padding: 15px 50px;
+	cursor: pointer;
+	border-radius: 10px;
+
 }

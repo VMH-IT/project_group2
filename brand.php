@@ -26,7 +26,7 @@ $std = executeResult($sql, true);
 </head>
 <body style="font-family: 'Hind', sans-serif;">
 	 <div class="img-01">
-            <div class=" img-11"><img src="style_sp/img-all/img-001.jpg"></div>
+            <div class=" img-11"><img src="style_sp/img-all/living-room-ceiling-lights-for-your-home.jpg"></div>
 
     </div> 
   
@@ -95,7 +95,7 @@ $std = executeResult($sql, true);
         $uList = executeResult($sql); 
         $index = 0;
         foreach($uList as $item) {    
-        echo '<a href="product.php?id='.$item['id_sp'].'" class="d02"><div >
+        echo '<a href="product.php?id='.$item['id_products'].'" class="d02"><div >
             <div class="img_product-1" ><img src="'.$item['img_1'].'"style="width: 100% ; height: auto;"></div>
         <div class="d05">
             <h4>'.$item['name_products'].'</h4></br></br>

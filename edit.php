@@ -4,19 +4,6 @@
 require_once('utyls/utility.php');   
 require_once('db/dbhelper.php');
 
-$ten_sach = $tac_gia = $gia_ban =$nxs =$id= "";     
-if(!empty($_POST)) {
-	$ten_sach = getPost('ten_sach');   
-	$tac_gia = getPost('tac_gia');
-	$gia_ban = getPost('gia_ban');
-	$nxs = getPost('nxs');
-
-	$sql = "insert into book(ten_sach, tac_gia,gia_ban,nxs ) values ('$ten_sach', '$tac_gia', '$gia_ban','$nxs')";  
-	execute($sql);                    
-	header('Location: books.php');     
-	die();
-}
-$id = getGet('id');
 
 ?>     
 
@@ -51,7 +38,7 @@ $id = getGet('id');
                     </svg></a>
      	     	</div>
             </div>
-     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3><h3>(This function is currently not available!!)</h3></div>
+     	    <div class="a-2 pont-ad" style="display: flex;"><h3>Dashboard</h3></div>
 	     	<div class="input-ss">
 	     	    <div class="input-s1">
 	     	    	<div class="input-a1 pont-ad"><h5>information form</h5></div>
@@ -88,11 +75,11 @@ $id = getGet('id');
 	     	    	<div class=" pont-ad">
 	     	    	    <div class="input-a3">
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>cooling capacity</label><br>
+	     	    	    		<label>wattage</label><br>
 		     	    	    <input type="text" name="">
 		     	    	    </div>
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>heating capacity</label><br>
+	     	    	    		<label>Material</label><br>
 		     	    	    <input type="text" name="">
 		     	    	   </div>
 		     	    	   <div class="input-b2">

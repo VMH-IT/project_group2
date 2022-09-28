@@ -5,7 +5,7 @@ require_once('utyls/utility.php');
 require_once('db/dbhelper.php');
 
 $id = getGet('id');
-$sql = "select * from vw_show_product where id_sp = '$id'";
+$sql = "select * from vw_show_product where id_products = '$id'";
 $std = executeResult($sql, true);
 
 ?>
@@ -90,12 +90,12 @@ $std = executeResult($sql, true);
                             <td><?=$std['Power_Input']?></td>
                         </tr>
                         <tr> 
-                            <td> cooling capacity:</td>
-                            <td><?=$std['cooling_capacity']?></td>
+                            <td> wattage:</td>
+                            <td><?=$std['wattage']?></td>
                         </tr>
                         <tr> 
-                            <td>heating capacity:</td>
-                            <td><?=$std['heating_capacity']?></td>
+                            <td>material :</td>
+                            <td><?=$std['material ']?></td>
                         </tr>
                     </table>
                 </div>
@@ -126,7 +126,7 @@ $std = executeResult($sql, true);
 $uList = executeResult($sql);    
         $index = 0;
         foreach($uList as $item) {    
-        echo '<a href="product.php?id='.$item['id_sp'].'" class="d02"><div >
+        echo '<a href="product.php?id='.$item['id_products'].'" class="d02"><div >
             <div class="img_product-1" ><img src="'.$item['img_1'].'"class="img-sp-1" style="width: 100% ; height: auto;"></div>        
              <div class ="d05">
             <h4>'.$item['name_products'].'</h4></br>

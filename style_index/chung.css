@@ -54,7 +54,7 @@
 .b01{
   margin-top: 20px;
   display: flex;
-  border: solid 1px #63B8FF;
+  border: solid 1px #FD841F;
   height: auto;
 }
 .c01{
@@ -69,7 +69,7 @@
   width: 33%;
 }
 .d01{
-  background: #63B8FF;
+  background: #FD841F;
     height: 100px;
     margin-top: 10px;
     display: flex;
@@ -89,6 +89,7 @@
   width: 1200px;
   margin: 0px auto;
   padding-top: 30px;
+
 
 }
 .b02{
@@ -132,28 +133,28 @@
 
 }
 .e04{
-  color: #63B8FF;
+  color: #CD104D;
 }
 .e03{
-  color: #4876FF;
+  color: #E14D2A;
 }
 .e05{
-  color: #1874CD;
+  color: #FD841F;
 }
 
 
 .e06> li {
   margin-top: 30px;
-  color:#63B8FF ;
+  color :#FD841F ;
 }
 .e06> li:hover {
-  color:#4876FF ;
+  color:#CD104D ;
 }
 .img-00{
    height: 120px;
    width: 120px;
-   border: solid 1px #63B8FF;
-   background-color: #63B8FF;
+   border: solid 1px #CD104D;
+   background-color: #FD841F;
    border-radius: 50%;
    margin: 10%  33%;
 }

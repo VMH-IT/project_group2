@@ -1,11 +1,11 @@
 <?php
 require_once('config.php');
-function init() {
-	$conn = mysqli_connect(HOST, USERNAME, PASSWORD);
-	mysqli_set_charset($conn, 'utf8');
-	mysqli_query($conn, SQL_CREATE_DATABASE);
-	mysqli_close($conn);
-}
+// function init() {
+// 	$conn = mysqli_connect(HOST, USERNAME, PASSWORD);
+// 	mysqli_set_charset($conn, 'utf8');
+// 	mysqli_query($conn, SQL_CREATE_DATABASE);
+// 	mysqli_close($conn);
+// }
 
 function execute($sql) {
 
@@ -31,4 +31,12 @@ function executeResult($sql, $isSingle = false) {
 	}
 	mysqli_close($conn);
 	return $data;
+}
+
+function insert ($sql){
+	$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
+	mysqli_set_charset($conn, 'utf8');
+	mysqli_query($conn, $sql);
+
+	return mysqli_insert_id($conn);
 }
