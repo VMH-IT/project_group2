@@ -35,61 +35,74 @@ if(isset($_GET['submit'])){
     <link rel="stylesheet" type="text/css" href="style_shared/shared.css">
 
 </head>
-<body style="background-color:    #fff;">
+<body style="background-color: #fff;">
 <div id="compare_comtainer" >
 
-      <center> <h4 style="margin-top: 20px;">Note: the page only works after user selects both products and presses 'compare' button</h4></center>
+      
         <div class="compare-dropmenu_bar">
-
-        
             <form action="" method="get">
-            <?php 
-                      $index = 0;
-                      $num = 0;
-                $sql= "select * from vw_show_product;";
-                $result = mysqli_query($conn,$sql);
-                $result1 = mysqli_query($conn,$sql);             
-            ?>
-         <label>First product:</label>
-                <select name="id_1">
-                    <option value="">---------------Select Product---------------</option>
-                <?php
-                    while ($row = mysqli_fetch_assoc($result)){
-                        echo '<option value="'.$row['id_products'].'"><span>'.(++$index).'</span>'.$row['name_products'].'</option>';
-                    } 
+                <?php 
+                        $index = 0;
+                        $num = 0;
+                    $sql= "select * from vw_show_product;";
+                    $result = mysqli_query($conn,$sql);
+                    $result1 = mysqli_query($conn,$sql);             
                 ?>
-                </select>
-            
-<br></br>
+                <div>
+                    <table>
+                    <tr>
+                        <td>First product: </td>
+                        <td>
+                            <select name="id_1">
+                            <option value="">---------------Select Product---------------</option>
+                            <?php
+                                while ($row = mysqli_fetch_assoc($result)){
+                                    echo '<option value="'.$row['id_products'].'"><span>'.(++$index).'</span>'.$row['name_products'].'</option>';
+                                } 
+                            ?>
+                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Second one:</td>
+                        <td>
+                            <select name="id_2">
+                                <option value="">---------------Select Product---------------</option>
+                                <?php
+                                while ($row = mysqli_fetch_assoc($result1)){
+                                    echo '<option value="'.$row['id_products'].'"><span>'.(++$num).'</span>'.$row['name_products'].'</option>';
+                                } 
+                                ?>
+                            </select>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                
+                <div class = "input_compare">
+                    <input type="submit" name="submit" value="compare" >
+                </div>
+            </form>
+        </div>  
 
+<table class="compare_image_bar"> 
+    <td>
 
-            <label>Second one:</label>
-                <select name="id_2">
-                    <option value="">---------------Select Product---------------</option>
-                    <?php
-                    while ($row = mysqli_fetch_assoc($result1)){
-                        echo '<option value="'.$row['id_products'].'"><span>'.(++$num).'</span>'.$row['name_products'].'</option>';
-                    } 
-                ?>
-                </select>
-            
-            <input type="submit" name="submit" value="compare" style="width: 70px;height: 40px; margin-top: 20px;display: block;">
-</form>
+    </td>
+    <td  class="image1">
+        <img id="image1" src="<?=$List['img_1']?> " >
+    </td>
+    
+    <td  class="image1 img2">
+        <img id="image2" src="<?=$List1['img_1']?>">
+    </td>
+    <td>
 
-        </div>
+    </td>
+  </table>
+       
 
-        <div class="compare_image_bar">
-            <div class="image1">
-                <center>
-                <img id="image1" src="<?=$List['img_1']?> " ></center>
-            </div>
-            <div class="image1">
-                <center>
-                <img id="image2" src="<?=$List1['img_1']?>"></center>
-            </div>
-        </div>
-
-        <div class="compare_detail_box" style="margin-top: 100px;margin-bottom: 10px;">
+        <div class="compare_detail_box" >
             <div class="Detail_C1">
                 <table id="table01">
                     <tr>

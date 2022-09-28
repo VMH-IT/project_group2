@@ -42,7 +42,7 @@ if(!empty($_POST)) {
            </li>
            <li>
              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-             <span>aptech1@aprotrain.com</span>
+             <span>Aptech1@aprotrain.com</span>
            </li>
           <li>
              <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
@@ -64,7 +64,7 @@ if(!empty($_POST)) {
            <div class="formBox">
                <div class="inputBox w50">
                    <input type="text" name="customer_name" required>
-                   <span>first and last name</span>
+                   <span>First and Last Name</span>
                </div>
                <div class="inputBox w50">
                    <input type="text" name="email" required>
@@ -72,15 +72,15 @@ if(!empty($_POST)) {
                </div>
                <div class="inputBox w50">
                    <input type="text" name="phone" required>
-                   <span>phone number</span>
+                   <span>Phone Number</span>
                </div>
                <div class="inputBox w100">
                    <textarea name="idea" required></textarea>
                    <span>Your Contributions</span>
                </div>
                <div class="inputBox w100">
-                   <input type="submit" value="To send">                
-                   <a href="index.php" style="margin-left: 100px;">home</a>
+                   <input type="submit" value="To Send">                
+                   <a class = "Home" href="index.php" style="margin-left: 100px; ">Home</a>
 
                </div>
                

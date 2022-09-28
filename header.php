@@ -40,7 +40,7 @@ if(isset($_GET['s'])) {
 <body>
 	<header class="header" id="myHeader">
         <div class="header-above-1" >
-			<p> Welcome to our online strore</p>
+			<p> Welcome to our online store</p>
 		</div>
 		<div class="header-above">
 			<div>

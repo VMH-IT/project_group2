@@ -10,7 +10,7 @@ section{
      justify-content: center;
      align-items: center;
      min-height: 100vh;
-     background: #63B8FF;
+     background: #FFFAE7;
  }
 section::before{
      content: "";
@@ -19,7 +19,7 @@ section::before{
      left: 0;
      width:50%;
      height: 100%;
-     background: #63B8FF;
+     background: #FFFAE7;
  }
 section .container{
      position: relative;
@@ -34,7 +34,7 @@ section .container{
      top: 40px;
      width: 380px;
      height: calc(100% - 80px);
-     background: #0f3959;
+     background: #FD841F;
      z-index: 1;
      padding: 40px;
      display: flex;
@@ -95,7 +95,7 @@ section .container .containerinfo .sci li a{
      box-shadow: 0 50px 50px rgba(0,0,0,0.5);
  }
 section .container .containerForm h2{
-     color: #0f3959;
+     color: #FD841F;
      font-size: 24px;
      font-weight: 500;
  }
@@ -135,14 +135,15 @@ section .container .containerForm .formBox .inputBox textarea{
 section .container .containerForm .formBox .inputBox input[type="submit"]{
      position: relative;
      cursor: pointer;
-     background: #0f3959;
+     background: #FD841F;
      color: #fff;
      border: none;
      max-width: 150px;
      padding: 12px;
+     border-radius: 5px;
  }
 section .container .containerForm .formBox .inputBox input[type="submit"]:hover{
-     background:  #ff568c;
+     background:  #a8900a;
  }
  /*thiết lập hiệu ứng chuyển động label cho thẻ input*/
  section .container .containerForm .formBox .inputBox span{
@@ -163,9 +164,17 @@ section .container .containerForm .formBox .inputBox input:focus ~ span,
      font-size: 12px;
      font-weight: 400;
      letter-spacing: 1px;
-     color: #ff568c
+     color: #a8900a
  }
 
-/*.color{
-   color: #63B8FF;  
+.Home{
+    padding: 13px 25px;
+    text-decoration:none ;
+    background-color: #FD841F;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Home:hover{
+    background-color: #a8900a;
 }

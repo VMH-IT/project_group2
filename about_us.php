@@ -1,3 +1,10 @@
+<?php
+require "header.php";
+
+require_once('db/dbhelper.php');
+      
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +17,9 @@
 <body>
 
     <section class="team-section">
+        <div class = "bulkhead">
+
+        </div>
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -57,7 +67,7 @@
                                     <a href=""><span class="fa fa-linkedin"></span></a>
                                     <a href=""><span class="fa fa-youtube"></span></a>
                                 </div>
-</div>
+                            </div>
                         </div>
                     </div>
                     <div class="item">
@@ -127,7 +137,14 @@
                 </div>
             </div>
         </div>
+        <div class = "bulkhead">
+
+        </div>
     </section>
+    <?php
+        require "footer.php";
+
+      ?>
 
 </body>
 
