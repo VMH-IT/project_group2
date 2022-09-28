@@ -6,7 +6,7 @@ require_once('utyls/utility.php');
 require_once('db/dbhelper.php');
 
 
-$name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capacity = $cooling_capacity = $Power_Input = "";
+$name_products = $price = $intro =$id_type	=$id_brand = $made_in = $material  = $wattage = $Power_Input = "";
 	if(!empty($_POST)) {
 		$img1 = getPost('img_1');
 		$img2 = getPost('img_2');
@@ -22,11 +22,13 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 		$id_type = getPost('id_type');
 		$id_brand = getPost('id_brand');
 		$made_in = getPost('made_in');
-		$heating_capacity = getPost('heating_capacity');
-		$cooling_capacity = getPost('cooling_capacity');
+
+		$material  = getPost('material ');
+		$wattage = getPost('wattage');
 		$Power_Input = getPost('Power_Input');
 		$intro = getPost('intro');
-		$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,heating_capacity,cooling_capacity,Power_Input,intro,id_img) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$heating_capacity','$cooling_capacity','$Power_Input','$intro','$image')";  
+		$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,material ,wattage,Power_Input,intro,id_img) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$material ','$wattage','$Power_Input','$intro','$image')";  
+
 		// var_dump($sql);
 		execute($sql);                    
 		header('Location: admin_list.php');     
@@ -91,21 +93,25 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 		     	    	    <div class="input-a4">
 		     	    	    	<div class="input-b1">
 			     	    	        <select class="form-select" aria-label="Default select example" name="id_brand">
-										<option selected>Brand</option>
-										<option value="1">Panasonic</option>
-										<option value="2">fu</option>
-										<option value="3">Daikin</option>
-										<option value="3">LG</option>
-										<option value="3">SamSung</option>
+
+										<option value="1">Material</option>
+										<option value="2">John Lewis</option>
+										<option value="3">OSRAM</option>
+										<option value="3">Laura Ashley</option>
+										<option value="3">Philips Hue</option>
+
+								
 
 									</select>
 			     	    	    </div>
 		     	    	    	<div class="input-b1">
 									 <select class="form-select" aria-label="Default select example"name="id_type">
-										<option selected>Type</option>
-										<option value="1">ceiling sound</option>
-										<option value="2">cabinet</option>
-										<option value="3">wall hanging</option>
+
+										<option value="1">Ceiling Lights</option>
+										<option value="2">Wall Lights</option>
+										<option value="3">Desk & Table Lamps</option>
+
+							
 									</select>
 			     	    	    </div>		     	    	    
 							</div>
@@ -116,12 +122,14 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $heating_capa
 		     	    	<div class=" pont-ad">
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>Cooling Capacity</label><br>
-			     	    	    	<input type="text" name="cooling_capacity">
+
+		     	    	    		<label>Wattage</label><br>
+			     	    	    	<input type="text" name="wattage">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
-		     	    	    		<label>Heating Capacity</label><br>
-			     	    	    	<input type="text" name="heating_capacity">
+		     	    	    		<label>material</label><br>
+			     	    	    	<input type="text" name="material ">
+
 			     	    	   </div>
 			     	    	   <div class="input-b2">
 		     	    	    		<label>Power Input</label><br>

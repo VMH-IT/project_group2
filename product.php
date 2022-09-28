@@ -90,12 +90,12 @@ $std = executeResult($sql, true);
                             <td><?=$std['Power_Input']?></td>
                         </tr>
                         <tr> 
-                            <td> cooling capacity:</td>
-                            <td><?=$std['cooling_capacity']?></td>
+                            <td> wattage:</td>
+                            <td><?=$std['wattage']?></td>
                         </tr>
                         <tr> 
-                            <td>heating capacity:</td>
-                            <td><?=$std['heating_capacity']?></td>
+                            <td>material :</td>
+                            <td><?=$std['material ']?></td>
                         </tr>
                     </table>
                 </div>

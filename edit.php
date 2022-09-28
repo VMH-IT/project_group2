@@ -75,11 +75,11 @@ require_once('db/dbhelper.php');
 	     	    	<div class=" pont-ad">
 	     	    	    <div class="input-a3">
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>cooling capacity</label><br>
+	     	    	    		<label>wattage</label><br>
 		     	    	    <input type="text" name="">
 		     	    	    </div>
 	     	    	    	<div class="input-b2">
-	     	    	    		<label>heating capacity</label><br>
+	     	    	    		<label>Material</label><br>
 		     	    	    <input type="text" name="">
 		     	    	   </div>
 		     	    	   <div class="input-b2">

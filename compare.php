@@ -127,12 +127,12 @@ if(isset($_GET['submit'])){
                     </tr>
                     <tr>
                         <td>
-                            <div>Cooling Capacity</div>
+                            <div>Wattage</div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div>Heating Capacity</div>
+                            <div>Material</div>
                         </td>
                     </tr>
                     <tr>
@@ -172,12 +172,12 @@ if(isset($_GET['submit'])){
                     </tr>
                     <tr>
                         <td>
-                            <div class="BGstyle01" id="cool1"><p><?=$List['cooling_capacity']?></p></div>
+                            <div class="BGstyle01" id="cool1"><p><?=$List['wattage']?></p></div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="BGstyle02" id="heat1"><p><?=$List['heating_capacity']?></p></div>
+                            <div class="BGstyle02" id="heat1"><p><?=$List['material']?></p></div>
                         </td>
                     </tr>
                     <!-- power_input -->
@@ -218,12 +218,12 @@ if(isset($_GET['submit'])){
                     </tr>
                     <tr>
                         <td>
-                            <div class="BGstyle01" id="cool2"><p><?=$List1['cooling_capacity']?></p></div>
+                            <div class="BGstyle01" id="cool2"><p><?=$List1['wattage']?></p></div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="BGstyle02" id="heat2"><p><?=$List1['heating_capacity']?></p></div>
+                            <div class="BGstyle02" id="heat2"><p><?=$List1['material']?></p></div>
                         </td>
                     </tr>
                     <!-- power_input -->

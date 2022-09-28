@@ -106,8 +106,8 @@ $uList = executeResult($sql);
                 <div >
                 <h3>'.$std['name_products'].'</h3>
                 <div class="capacity ">
-                <p>cooling capacity : '.$std['cooling_capacity'].'</p>
-                <P>heating capacity : '.$std['heating_capacity'].'</P>
+                <p>wattage : '.$std['wattage'].'</p>
+                <P>material : '.$std['material '].'</P>
                 </div></br>
 
                 <h3>price : '.$std['price'].'$</h3>
