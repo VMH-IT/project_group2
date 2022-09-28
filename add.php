@@ -22,11 +22,13 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $material  = 
 		$id_type = getPost('id_type');
 		$id_brand = getPost('id_brand');
 		$made_in = getPost('made_in');
+
 		$material  = getPost('material ');
 		$wattage = getPost('wattage');
 		$Power_Input = getPost('Power_Input');
 		$intro = getPost('intro');
 		$sql = "insert into products(name_products, price,id_type,id_brand ,made_in,material ,wattage,Power_Input,intro,id_img) values ('$name_products', '$price', '$id_type','$id_brand','$made_in','$material ','$wattage','$Power_Input','$intro','$image')";  
+
 		// var_dump($sql);
 		execute($sql);                    
 		header('Location: admin_list.php');     
@@ -91,19 +93,25 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $material  = 
 		     	    	    <div class="input-a4">
 		     	    	    	<div class="input-b1">
 			     	    	        <select class="form-select" aria-label="Default select example" name="id_brand">
+
 										<option value="1">Material</option>
 										<option value="2">John Lewis</option>
 										<option value="3">OSRAM</option>
 										<option value="3">Laura Ashley</option>
 										<option value="3">Philips Hue</option>
 
+								
+
 									</select>
 			     	    	    </div>
 		     	    	    	<div class="input-b1">
 									 <select class="form-select" aria-label="Default select example"name="id_type">
+
 										<option value="1">Ceiling Lights</option>
 										<option value="2">Wall Lights</option>
 										<option value="3">Desk & Table Lamps</option>
+
+							
 									</select>
 			     	    	    </div>		     	    	    
 							</div>
@@ -114,12 +122,14 @@ $name_products = $price = $intro =$id_type	=$id_brand = $made_in = $material  = 
 		     	    	<div class=" pont-ad">
 		     	    	    <div class="input-a3">
 		     	    	    	<div class="input-b2">
+
 		     	    	    		<label>Wattage</label><br>
 			     	    	    	<input type="text" name="wattage">
 			     	    	    </div>
 		     	    	    	<div class="input-b2">
 		     	    	    		<label>material</label><br>
 			     	    	    	<input type="text" name="material ">
+
 			     	    	   </div>
 			     	    	   <div class="input-b2">
 		     	    	    		<label>Power Input</label><br>
