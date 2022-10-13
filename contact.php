@@ -2,9 +2,18 @@
 session_start();
 require_once('utyls/utility.php');     
 require_once('db/dbhelper.php');
-
+$error=[];
+function isFormValidated(){
+    global $error;
+    return count($error) == 0;
+}
+if(!empty($_POST)){
+  if(strlen(getPost('phone')) != 10){
+      $error[]= "SSID must 10 number";
+  }
+}
 $customer_name = $email = $phone =$idea = "";     
-if(!empty($_POST)) {
+if( !empty($_POST) && isFormValidated()) {
     $customer_name = getPost('customer_name');   
     $email = getPost('email');
     $phone = getPost('phone');
@@ -12,9 +21,12 @@ if(!empty($_POST)) {
 
     $sql = "insert into feedback(customer_name, email,phone,idea ) values ('$customer_name', '$email', '$phone','$idea')";  
     execute($sql);                    
-    header('Location: contact.php');     
+    header('Location: contact.php');    
+    var_dump($sql); 
     die();
 }
+
+
 ?>
 <!DOCTYPE html>
  <html lang="en">
@@ -27,6 +39,15 @@ if(!empty($_POST)) {
      <link rel="stylesheet" href="style_compare_vs_contact/lienhe.css">
  </head>
  <body>
+ <?php if (!empty($_POST) && !isFormValidated()) : ?>
+            <ul style="color:red;text-align:center;">
+                <?php
+                  $message = "phone must has 10 digist";
+                  
+                  echo "<script type='text/javascript'>alert('$message');</script>"
+                ?>
+            </ul>
+<?php endif;?>
   <section>
    <div class="container">
      <div class="containerinfo">
@@ -58,7 +79,8 @@ if(!empty($_POST)) {
          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
        </ul>
     </div>
-    <form method="post">
+   
+    <form method ="post">
     <div class="containerForm">
            <h2>Send Message</h2>
            <div class="formBox">
@@ -67,11 +89,11 @@ if(!empty($_POST)) {
                    <span>First and Last Name</span>
                </div>
                <div class="inputBox w50">
-                   <input type="text" name="email" required>
+                   <input type="email" name="email" required>
                    <span>Email</span>
                </div>
                <div class="inputBox w50">
-                   <input type="text" name="phone" required>
+                   <input type="number" name="phone" required>
                    <span>Phone Number</span>
                </div>
                <div class="inputBox w100">

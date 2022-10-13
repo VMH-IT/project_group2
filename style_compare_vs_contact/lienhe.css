@@ -43,7 +43,7 @@ section .container{
      box-shadow: 0 20px 20px rgba(0,0,0,0.2);
  }
 section .container .containerinfo h2{
-     color: #fff;
+     color:black;
      font-size: 24px;
      margin: 20px 0;
  }
@@ -56,7 +56,7 @@ section .container .containerinfo h2{
      align-items: flex-start;
  }
 section .container .containerinfo li span{
-     color: #fff;
+     color: black;
      margin-left: 10px;
      font-weight: 300;
      opacity: 0.5;
@@ -77,7 +77,7 @@ section .container .containerinfo .sci li{
 section .container .containerinfo .sci li a{
      text-decoration: none;
      opacity: 0.5;
-     color: #fff;
+     color:black;
      font-size: 32px;
  }
  /*Hiệu Ứng Hover Icon*/
@@ -136,7 +136,7 @@ section .container .containerForm .formBox .inputBox input[type="submit"]{
      position: relative;
      cursor: pointer;
      background: #FD841F;
-     color: #fff;
+     color: black;
      border: none;
      max-width: 150px;
      padding: 12px;
@@ -171,7 +171,7 @@ section .container .containerForm .formBox .inputBox input:focus ~ span,
     padding: 13px 25px;
     text-decoration:none ;
     background-color: #FD841F;
-    color: #fff;
+    color: black;
     border-radius: 5px;
     cursor: pointer;
 }

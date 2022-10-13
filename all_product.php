@@ -164,7 +164,7 @@ $uList = executeResult($sql);
         <div class="c02">
             <div class="d03">
               <div class="e01"> <h4 class="text">Product arrangements</h4></div>
-              <a href="all_product.php" ><div class="e02 "><p>all product</p></div> </a>
+              <a href="all_product.php" ><div class="e02 " style="padding-left: 30px;"><p>All product</p></div> </a>
             <div class="e04"><p > Sort by product category</p></div>
             <?php 
                 $sql= "select * from type;";
@@ -179,7 +179,7 @@ $uList = executeResult($sql);
                       </a>';
                         }               
             ?>
-            <div class="e04"><p > classified by brand</p></div>
+            <div class="e04"><p > Classified by brand</p></div>
             <?php 
                 $sql= "select * from brand;";
                 $result = mysqli_query($conn,$sql);
@@ -323,7 +323,7 @@ $uList = executeResult($sql);
                                                                 if(isset($_GET['price_7'])){
                                                                     echo'Products priced from: > 2000$ ';
                                                                 }else{
-                                                                    echo'all product';
+                                                                    echo'All product';
                                                                 }
                                                             }
                                                         }

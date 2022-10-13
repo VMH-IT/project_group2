@@ -26,7 +26,12 @@
   background: #FD841F;
   width: 100%;
 }
-
+.name_products_index{
+  font-weight:normal;
+  font-size:normal;
+  line-height:normal;
+  letter-spacing:normal
+}
 
 
 
@@ -61,7 +66,7 @@
 }
 
 .d03{
-  height: 500px;
+
   width:100% ;
   margin-left: 2%;
   margin-right: 2%;
@@ -118,11 +123,12 @@
 }
 .img-sp-2{
   width: 100%;
-  height: 95%;
+  height: 280px;
   background-color: #FD841F;
 }
 
 .d05 h4{
+  margin-top: 85px;
   height: 44px;
   color:#FD841F ;
 }
@@ -133,4 +139,12 @@
 p{
   color: #898989
 ;
+}
+.d05 p{
+  margin-top: -20px;
+}
+
+.d06 p{
+  margin-top: 20px;
+
 }
