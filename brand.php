@@ -67,7 +67,7 @@ $std = executeResult($sql, true);
 
 		<div class="s32">
           <div class="tyles">
-            <div class="tyle"   ><h5 class="texts">company's products</h5></div>
+            <div class="tyle"   ><h5 class="texts">Company's products</h5></div>
             <div class="hinh_binh_hanh"></div>
             <div class="a31">
               <a href="brand.php?id_brand=<?=$std['id_brand']?>"><div class="b31">all </div></a><br>

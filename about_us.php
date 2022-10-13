@@ -116,7 +116,7 @@ require_once('db/dbhelper.php');
                         <img src="style_head_vs_last/background/logo/about_us/PHP.jpg" alt="team" />
                         <div class="inner">
                             <div class="info">
-                                <h5>Project Manager</h5>
+                                <h5>Pham Hong Phuc</h5>
                                 <p>Leader</p>
                                 <ul>
                                     <li>Developing a project plan</li>
